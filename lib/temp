@@ -1,0 +1,22 @@
+CustomScrollView(
+        slivers: <Widget>[
+          SliverStaggeredGrid.countBuilder(
+            crossAxisCount: 2,
+            itemCount: 8,
+            itemBuilder: (BuildContext context, int index) {
+              return Container(
+                width:200,
+                height: 300,
+                color: Colors.green,
+                child: new Center(
+                  child: new CircleAvatar(
+                      backgroundColor: Colors.white, child: new Text('$index')),
+                ),
+              );
+            },
+            staggeredTileBuilder: (int index) => StaggeredTile.count(1, 1),
+            mainAxisSpacing: 4.0,
+            crossAxisSpacing: 4.0,
+          ),
+        ],
+      ),
